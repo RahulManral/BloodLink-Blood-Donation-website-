@@ -1,0 +1,76 @@
+<?php
+$servername = "localhost";
+$username = "root"; // Your database username
+$password = ""; // Your database password
+$dbname = "blood_link"; // Your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Hash the password before storing it
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO users (email, password) VALUES ('$email', '$hashed_password')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql .  . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Link</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Blood-Link</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="home.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="connect.html" class="navbar-link">Connect</a></li>
+                <li class="navbar-item"><a href="donate.html" class="navbar-link">Donate</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                <li class="navbar-item1"><a id="login-link" href="login.html" class="navbar-link">login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  <div class="container1">
+    <input type="checkbox" id="check">
+    <div class="registration form">
+      <header>SignUp</header>
+      <form method="POST">
+        <input type="text" name="email" placeholder="Enter your email">
+        <input type="password" name="password" placeholder="Create a password">
+        <input type="password" name="cpassword" placeholder="Confirm your password">
+        <input type="submit" name="" value="Signup">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check"><a href="login.html">Login</a></label>
+        </span>
+      </div>
+      </div>
+</body>
+</html>

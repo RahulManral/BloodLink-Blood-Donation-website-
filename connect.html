@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Link</title>
+    <link rel="stylesheet" href="connect.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Blood-Link</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="home.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="connect.html" class="navbar-link">Connect</a></li>
+                <li class="navbar-item"><a href="donate.html" class="navbar-link">Donate</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                <li class="navbar-item1"><a id="login-link" href="login.html" class="navbar-link">login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="topic-1">
+        <h3 class="line">Connect</h3>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="image/volunteering.png" alt="Placeholder Image">
+            <h2>Volunteer</h2>
+            <p>Volunteer as donor to save life</p>
+            <a href="volunteerform.html"><button>Volunteer</button></a>
+        </div>
+        <div class="card">
+            <img src="image/search.png" alt="Placeholder Image">
+            <h2>Find Donor</h2>
+            <p>Find donor and contact them </p>
+            <a href="volunteertable.html"><button>Find Donor</button></a>
+        </div>
+        <div class="card">
+            <img src="image/building.png" alt="Placeholder Image">
+            <h2>Donate</h2>
+            <p>Find donor and contact them </p>
+            <a href="donate.html"><button>Donate NGO</button></a>
+        </div>
+    </div>
+
+
+    <!-- <div class="table-container">
+        <input type="text" id="searchInput" onkeyup="filterTable()"
+            placeholder="Search for names, Blood types, Citys..">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Blood type</th>
+                    <th>City</th>
+                    <th>Phone</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>28</td>
+                    <td>A</td>
+                    <td>New York</td>
+                    <td>8850676845</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>34</td>
+                    <td>B</td>
+                    <td>Los Angeles</td>
+                    <td>8850676845</td>
+                </tr>
+                <tr>
+                    <td>Sam Wilson</td>
+                    <td>19</td>
+                    <td>C</td>
+                    <td>Chicago</td>
+                    <td>8850676845</td>
+                </tr>
+                <tr>
+                    <td>Lisa Brown</td>
+                    <td>30</td>
+                    <td>O</td>
+                    <td>Miami</td>
+                    <td>8850676845</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function filterTable() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let table = document.getElementById('dataTable');
+            let tr = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < tr.length; i++) {
+                tr[i].style.display = 'none';
+                let td = tr[i].getElementsByTagName('td');
+                for (let j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = '';
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script> -->
+
+    
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Blood-Link. All rights reserved.</p>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+
+</html>

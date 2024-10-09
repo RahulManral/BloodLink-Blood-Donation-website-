@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-link</title>
+    <link rel="stylesheet" href="volunteertable.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Blood-Link</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="home.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="connect.html" class="navbar-link">Connect</a></li>
+                <li class="navbar-item"><a href="donate.html" class="navbar-link">Donate</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                <li class="navbar-item1"><a id="login-link" href="login.html" class="navbar-link">login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="topic-1">
+        <h3 class="line">Donor's</h3>
+    </div>
+
+
+    <div class="table-container">
+        <input type="text" id="searchInput" onkeyup="filterTable()"
+            placeholder="Search for names, Blood types, Citys..">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th> 
+                    <th>Age</th>
+                    <th>Blood type</th>
+                    <th>City</th>
+                    <th>Phone</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Male</td>
+                    <td>28</td>
+                    <td>A</td>
+                    <td>Eastern District</td>
+                    <td>64395738</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Male</td>
+                    <td>34</td>
+                    <td>B</td>
+                    <td>Tsuen Wan District</td>
+                    <td>70356232</td>
+                </tr>
+                <tr>
+                    <td>Sam Wilson</td>
+                    <td>Male</td>
+                    <td>19</td>
+                    <td>C</td>
+                    <td>Sai Kung District</td>
+                    <td>84236223</td>
+                </tr>
+                <tr>
+                    <td>Lisa Brown</td>
+                    <td>Female</td>
+                    <td>30</td>
+                    <td>O</td>
+                    <td>Tsing Yi District</td>
+                    <td>46743213</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function filterTable() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let table = document.getElementById('dataTable');
+            let tr = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < tr.length; i++) {
+                tr[i].style.display = 'none';
+                let td = tr[i].getElementsByTagName('td');
+                for (let j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = '';
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Blood-Link. All rights reserved.</p>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</body>
+</html>

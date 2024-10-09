@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Link</title>
+    <link rel="stylesheet" href="volunteerform.css">
+    <script src="volunteerform.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Blood-Link</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="home.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="connect.html" class="navbar-link">Connect</a></li>
+                <li class="navbar-item"><a href="donate.html" class="navbar-link">Donate</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                <li class="navbar-item1"><a id="login-link" href="login.html" class="navbar-link">login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Blood Donation Form</h1>
+        <form id="donationForm" action="/submit" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="">Select</option>
+                <option value="Central and Western District">Central and Western District</option>
+                <option value="Eastern District">Eastern District</option>
+                <option value="Southern District">Southern District</option>
+                <option value="Wan Chai District">Wan Chai District</option>
+                <option value="Kowloon City District">Kowloon City District</option>
+                <option value="Kowloon East District">Kowloon East District</option>
+                <option value="Kowloon West District">Kowloon West District</option>
+                <option value="Shatin Distric">Shatin Distric</option>
+                <option value="Tsuen Wan District">Tsuen Wan District</option>
+                <option value="Tsing Yi District">Tsing Yi District</option>
+                <option value="Yuen Long District">Yuen Long District</option>
+                <option value="North District">North District</option>
+                <option value="Sai Kung District">Sai Kung District</option>
+                <option value="Islands District">Islands District</option>
+            </select>
+
+            <label for="blood-group">Blood Group:</label>
+            <select id="blood-group" name="blood-group" required>
+                <option value="">Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <fieldset>
+                <legend>In the last six months, have you had any of the following?</legend>
+                <label><input type="checkbox" name="health-issues" value="fever"> Fever or flu-like symptoms</label><br>
+                <label><input type="checkbox" name="health-issues" value="surgery"> Recent surgery</label><br>
+                <label><input type="checkbox" name="health-issues" value="tattoo"> Tattoo or body piercing</label><br>
+                <label><input type="checkbox" name="health-issues" value="travel"> Travel to a malaria-endemic area</label><br>
+                <label><input type="checkbox" name="health-issues" value="transfusion"> Received a blood transfusion</label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Blood-Link. All rights reserved.</p>
+        </div>
+    </footer> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ </html>
+</body>

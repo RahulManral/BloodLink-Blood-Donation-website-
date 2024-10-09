@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Link</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Blood-Link</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="home.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="connect.html" class="navbar-link">Connect</a></li>
+                <li class="navbar-item"><a href="donate.html" class="navbar-link">Donate</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                <li class="navbar-item1"><a id="login-link" href="login.html" class="navbar-link">login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="left-side">
+            <img src="image/contact.jpeg" alt="Contact Us Image">
+        </div>
+        <div class="right-side">
+            <h1>Contact Us</h1>
+            <form action="/submit" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+
+</html>

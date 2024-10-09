@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Cards</title>
+    <style>
+        /* Reset some default browser styles */
+body,
+h1,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+/*/////////////////////////-Body-/////////////////////////*/
+
+
+html {
+  height: 100px;
+}
+
+body {
+  font-size: 16px;
+  background-color: #ffc5c5;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card-text {
+            flex: 1;
+        }
+        .card-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .card-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .card-icons img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-text">
+                <h3>Card Title 1</h3>
+                <p>Some description text for the first card.</p>
+                <div class="card-icons">
+                    <img src="website-icon.png" alt="Website Icon">
+                    <img src="image/building.png" alt="Phone Icon">
+                    <span>+1234567890</span>
+                </div>
+            </div>
+            <img src="image/building.png" alt="Image 1" class="card-image">
+        </div>
+        <div class="card">
+            <div class="card-text">
+                <h3>Card Title 2</h3>
+                <p>Some description text for the second card.</p>
+                <div class="card-icons">
+                    <img src="website-icon.png" alt="Website Icon">
+                    <img src="phone-icon.png" alt="Phone Icon">
+                    <span>+0987654321</span>
+                </div>
+            </div>
+            <img src="image2.jpg" alt="Image 2" class="card-image">
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+</body>
+</html>
